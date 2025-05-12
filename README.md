@@ -109,6 +109,53 @@ Ensure `depot_tools` is in PATH and Visual Studio 2022 is installed with C++ des
 
 ---
 
+## How to Run Cleanup and Build Scripts
+
+After you've run `nexa_setup.bat` and Chromium has been fetched successfully:
+
+### Step 1 — Run Cleanup Script
+
+Make sure you're using **Git Bash**, **WSL**, or any Unix-like shell on Windows:
+
+```
+bash
+cd Nexa-Browser
+bash nexa_minimal_cleanup.sh
+```
+ 
+This script will:
+
+- Delete unused Chromium modules and third-party directories
+- Configure a minimal `args.gn` for optimized builds
+- Generate output using gn and `autoninja`
+- Strip the `chrome` binary and compress it using Brotli
+
+The final output will be:
+
+```
+out/Nexa/chrome # full browser binary
+out/Nexa/chrome.br # compressed version
+```
+
+Step 2 — (Optional) Build a Windows Installer
+
+To generate a lightweight Windows `.exe` installer, run:
+
+```
+bash 
+mini_installer_build.sh
+```
+
+Output installer path:
+
+```
+out/NexaInstaller/mini_installer.exe
+```
+
+Make sure GN/Ninja and all Chromium build dependencies are correctly installed before running these scripts.
+
+---
+
 ## License
 
 Nexa is open-source and based on Chromium, licensed under the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
