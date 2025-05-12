@@ -1,0 +1,45 @@
+==========================
+ START HERE - Nexa Browser
+==========================
+
+This file helps you bootstrap the Nexa-Browser project cleanly.
+
+REQUIREMENTS:
+-------------
+- Windows 10/11 x64
+- Visual Studio 2022 with "Desktop Development with C++"
+- Python 3.10+
+- Git
+- ~25 GB of free disk space
+
+SETUP STEPS:
+------------
+1. Clone this repository:
+   > git clone https://github.com/GeekNeuron/Nexa-Browser.git
+   > cd Nexa-Browser
+
+2. Run the setup batch file:
+   > double-click `nexa_setup.bat`
+
+3. After fetch completes, run cleanup and build:
+   > bash nexa_minimal_cleanup.sh
+
+4. Optionally build a mini installer:
+   > bash mini_installer_build.sh
+
+5. Your browser binary will be at:
+   > out/Nexa/chrome
+
+6. Compressed version (for shipping):
+   > out/Nexa/chrome.br
+
+RECOMMENDED STRUCTURE:
+----------------------
+Nexa-Browser/
+├── chromium/
+├── depot_tools/
+├── *.sh / *.bat
+├── splash_screen.cc
+├── about_nexa_dialog.cc
+├── README.md
+└── start_here.txt
