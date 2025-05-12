@@ -20,8 +20,6 @@
 ## Removed Modules
 
 ```
-chrome/android
-chrome/ios
 chrome/test
 chrome/browser/devtools
 chrome/browser/signin
