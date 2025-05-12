@@ -4,7 +4,7 @@
 cd src || exit 1
 
 # حذف ماژول‌های غیرضروری
-rm -rf chrome/android chrome/ios chrome/test chrome/browser/devtools chrome/browser/signin \
+rm -rf chrome/test chrome/browser/devtools chrome/browser/signin \
 chrome/browser/sync chrome/browser/translate components/sync components/translate \
 components/metrics components/spellcheck components/nacl components/webrtc components/variations \
 components/pdf components/signin components/printing content/browser/devtools \
